@@ -21,10 +21,10 @@ func updateHighestHeight():
 	highestCameraHeight = self.global_position.y*-1
 
 func moveCam():
-	if playerRef.global_position.y*-1> highestCameraHeight+100:
+	if playerRef.global_position.y*-1> highestCameraHeight+300:
 		#print("pos ", playerRef.global_position.y*-1)
 		#print("camheigh ", highestCameraHeight)
-		self.global_position.y = playerRef.global_position.y+100
+		self.global_position.y = playerRef.global_position.y+300
 		print("ooooh")
 	else:
 		self.global_position.y = self.global_position.y-currentCameraSpeed
