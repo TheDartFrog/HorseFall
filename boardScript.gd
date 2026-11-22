@@ -2,6 +2,10 @@ extends Node2D
 
 @onready var playerRef = get_tree().root.find_child("PlayerScene", true, false)
 
+
+var yesTexture = preload("res://Assets/Textures/yes.png")
+var noTexture = preload("res://Assets/Textures/no.png")
+
 var wasGrounded = false
 var isGrounded = false
 
@@ -63,6 +67,7 @@ func enableButton(number: int):
 	match number: # oh yeah we in spaghetti town babeeyyyyy
 		1:
 			enableBtn1 = true #TODO: setting textures for enabled
+			$goButton1.texture_hover = yesTexture
 		2:
 			enableBtn2 = true
 		3:
@@ -78,6 +83,7 @@ func disableButton(number: int):
 	match number: # second spaghetti settlement
 		1:
 			enableBtn1 = false #TODO: setting textures for disabled
+			$goButton1.texture_hover = noTexture
 		2:
 			enableBtn2 = false
 		3:

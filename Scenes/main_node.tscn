@@ -17,4 +17,4 @@ position = Vector2(0, -2)
 unique_name_in_owner = true
 
 [node name="Platform2" parent="." unique_id=1213041697 instance=ExtResource("1_jah86")]
-position = Vector2(-150, -200)
+position = Vector2(-250, -200)
