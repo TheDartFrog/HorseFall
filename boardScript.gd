@@ -70,10 +70,13 @@ func enableButton(number: int):
 			$goButton1.texture_hover = yesTexture
 		2:
 			enableBtn2 = true
+			$goButton2.texture_hover = yesTexture
 		3:
 			enableBtn3 = true
+			$goButton3.texture_hover = yesTexture
 		4:
 			enableBtn4 = true
+			$goButton4.texture_hover = yesTexture
 		_:
 			print("what")
 
@@ -86,10 +89,13 @@ func disableButton(number: int):
 			$goButton1.texture_hover = noTexture
 		2:
 			enableBtn2 = false
+			$goButton2.texture_hover = yesTexture
 		3:
 			enableBtn3 = false
+			$goButton3.texture_hover = yesTexture
 		4:
 			enableBtn4 = false
+			$goButton4.texture_hover = yesTexture
 		_:
 			print("what")
 
