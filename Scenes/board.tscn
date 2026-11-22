@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://75x8supcyloh"]
 
 [ext_resource type="Texture2D" uid="uid://dkb3s7vy01g7g" path="res://Assets/Textures/board.png" id="1_2wvcj"]
+[ext_resource type="Script" uid="uid://ckcme4k646ijw" path="res://boardScript.gd" id="1_shhme"]
 [ext_resource type="Texture2D" uid="uid://bawqqua0tr7ij" path="res://Assets/Textures/availableMoves_board.png" id="2_uh3b8"]
+[ext_resource type="Texture2D" uid="uid://q284yrqpcsja" path="res://Assets/Textures/yes.png" id="3_uh3b8"]
 
 [node name="Board" type="Node2D" unique_id=850784260]
+script = ExtResource("1_shhme")
 
 [node name="board_checkerboard" type="TextureRect" parent="." unique_id=1882535426]
 z_as_relative = false
@@ -37,3 +40,72 @@ offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_uh3b8")
+
+[node name="goButton1" type="TextureButton" parent="." unique_id=907937192]
+z_index = 3
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -50.0
+offset_right = -150.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_hover = ExtResource("3_uh3b8")
+
+[node name="goButton2" type="TextureButton" parent="." unique_id=579986029]
+z_index = 3
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_hover = ExtResource("3_uh3b8")
+
+[node name="goButton3" type="TextureButton" parent="." unique_id=1031441957]
+z_index = 3
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_hover = ExtResource("3_uh3b8")
+
+[node name="goButton4" type="TextureButton" parent="." unique_id=533248489]
+z_index = 3
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 150.0
+offset_top = -50.0
+offset_right = 250.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_hover = ExtResource("3_uh3b8")
+
+[connection signal="button_down" from="goButton1" to="." method="_on_go_button_1_button_down"]
+[connection signal="button_down" from="goButton2" to="." method="_on_go_button_2_button_down"]
+[connection signal="button_down" from="goButton3" to="." method="_on_go_button_3_button_down"]
+[connection signal="button_down" from="goButton4" to="." method="_on_go_button_4_button_down"]

@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+var isGrounded = true
 
 func _ready():
 	print("yay")
