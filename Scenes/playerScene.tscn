@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://nh5pcrtulosm" path="res://Scripts/playerScript.gd" id="1_33jum"]
 [ext_resource type="Texture2D" uid="uid://bc2gtgbshd8xx" path="res://Assets/Textures/icon.svg" id="1_f0e4c"]
 [ext_resource type="PackedScene" uid="uid://75x8supcyloh" path="res://Scenes/board.tscn" id="3_ok6mi"]
+[ext_resource type="Script" uid="uid://dx26327f03si4" path="res://Scripts/platform_spawner.gd" id="4_ho5nx"]
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_lm2wk"]
 length = 8.0
@@ -52,3 +53,6 @@ position = Vector2(200, -120)
 [node name="GroundCheckCol2D" type="CollisionShape2D" parent="groundCheckArea2D" unique_id=861619530]
 position = Vector2(0, -1)
 shape = SubResource("SeparationRayShape2D_lm2wk")
+
+[node name="platformSpawner" type="Node2D" parent="." unique_id=916069684]
+script = ExtResource("4_ho5nx")

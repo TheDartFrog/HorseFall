@@ -115,7 +115,7 @@ func _on_go_button_2_button_down() -> void:
 func _on_go_button_3_button_down() -> void:
 	if enableBtn3:
 		playerRef.goToNode(3)
-		print("gooo")
+		
 
 
 func _on_go_button_4_button_down() -> void:

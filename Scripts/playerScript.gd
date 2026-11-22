@@ -6,7 +6,6 @@ func _ready():
 	print("yay")
 
 func _physics_process(delta): ## yo are we even gonna need this lowk         update: yes we are
-	print($groundCheckArea2D.get_overlapping_bodies().is_empty())
 	if $groundCheckArea2D.get_overlapping_bodies().is_empty():
 		isGrounded = false
 	else: isGrounded = true
