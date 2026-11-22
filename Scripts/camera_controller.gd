@@ -28,5 +28,9 @@ func moveCam():
 
 func updateCameraSpeed():
 	currentCameraSpeed = currentCameraSpeed * (1 + (cameraSpeedMult/cameraSpeedMagnitude))
+	
+
+func stopCamera(): # for when we want to stop the camera later (during death)
+	currentCameraSpeed = 0
 
 # uhhhh is that it?
