@@ -12,8 +12,8 @@ freeze = true
 [node name="platformSprite" type="TextureRect" parent="." unique_id=505994198]
 z_index = 1
 z_as_relative = false
-offset_right = 96.0
-offset_bottom = 40.0
+offset_right = 100.0
+offset_bottom = 45.0
 mouse_filter = 2
 texture = ExtResource("1_1rc8e")
 expand_mode = 1

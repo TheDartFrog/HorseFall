@@ -7,22 +7,14 @@
 [node name="MainNode" type="Node2D" unique_id=1211837900]
 
 [node name="Platform" parent="." unique_id=974148504 instance=ExtResource("1_jah86")]
-position = Vector2(-47, 101)
+position = Vector2(-50, 0)
 
 [node name="PlayerScene" parent="." unique_id=630646939 instance=ExtResource("2_5otrc")]
 unique_name_in_owner = true
-
-[node name="Platform2" parent="." unique_id=299482523 instance=ExtResource("1_jah86")]
-position = Vector2(32, 14)
-
-[node name="Platform3" parent="." unique_id=300946520 instance=ExtResource("1_jah86")]
-position = Vector2(-167, -66)
-
-[node name="Platform4" parent="." unique_id=2033096162 instance=ExtResource("1_jah86")]
-position = Vector2(143, 167)
-
-[node name="Platform5" parent="." unique_id=488197905 instance=ExtResource("1_jah86")]
-position = Vector2(-262, -66)
+position = Vector2(0, -2)
 
 [node name="CameraController" parent="." unique_id=804672092 instance=ExtResource("3_nfdxk")]
 unique_name_in_owner = true
+
+[node name="Platform2" parent="." unique_id=1213041697 instance=ExtResource("1_jah86")]
+position = Vector2(-150, -200)

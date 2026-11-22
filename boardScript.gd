@@ -45,7 +45,18 @@ func switchGroundedStateBoard():
 			#TODO: gray out possible moves
 
 func updateMoves():
-	pass #TODO: check collision, if allowed enable button
+	if $goButton1/Area2Dbtn1.get_overlapping_bodies().is_empty():
+		enableButton(1)
+	else: disableButton(1)
+	if $goButton2/Area2Dbtn2.get_overlapping_bodies().is_empty():
+		enableButton(2)
+	else: disableButton(2)
+	if $goButton3/Area2Dbtn3.get_overlapping_bodies().is_empty():
+		enableButton(3)
+	else: disableButton(3)
+	if $goButton4/Area2Dbtn4.get_overlapping_bodies().is_empty():
+		enableButton(4)
+	else: disableButton(4)
 
 func enableButton(number: int):
 	
