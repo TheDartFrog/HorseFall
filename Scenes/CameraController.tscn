@@ -2,9 +2,18 @@
 
 [ext_resource type="Script" uid="uid://pl20ly15rg4g" path="res://Scripts/camera_controller.gd" id="1_qsppd"]
 
-[node name="CameraController" type="Node2D" unique_id=804672092]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lm2wk"]
+size = Vector2(2771, 181)
+
+[node name="CameraController" type="Area2D" unique_id=1965835914]
 script = ExtResource("1_qsppd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=231145500]
 position = Vector2(0, -189)
 position_smoothing_enabled = true
+
+[node name="deathBarrier" type="CollisionShape2D" parent="." unique_id=254325246]
+position = Vector2(0.5, 304.5)
+shape = SubResource("RectangleShape2D_lm2wk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
