@@ -8,6 +8,8 @@ var cameraSpeedMagnitude = 10.0
 
 var highestCameraHeight = self.global_position.y * -1 ## mult by -1 because why the hell is up decreasing in godot????
 
+var highestPlayerHeight = 0
+
 func _ready():
 	playerRef = %PlayerScene
 
@@ -15,6 +17,7 @@ func _physics_process(delta):
 	updateHighestHeight()
 	moveCam()
 	updateCameraSpeed()
+	updateScore()
 	
 
 func updateHighestHeight():
@@ -53,4 +56,13 @@ func loseGameLol():
 	print("lose game func yeah")
 	currentCameraSpeed = 0
 	playerRef.hide()
-	#TODO: lose game screen
+	get_tree().change_scene_to_file("res://Scenes/mainMenu.tscn")
+
+
+func updateScore():
+	
+	if highestPlayerHeight < playerRef.global_position.y*-1:
+		highestPlayerHeight = playerRef.global_position.y*-1
+		$CanvasLayer/MarginContainer/HBoxContainer/Label2.text = str(int(highestPlayerHeight*10))
+	
+	pass

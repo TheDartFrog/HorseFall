@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://deu05bne6bgal"]
 
-[ext_resource type="Texture2D" uid="uid://bc2gtgbshd8xx" path="res://Assets/Textures/icon.svg" id="1_1rc8e"]
+[ext_resource type="Texture2D" uid="uid://b0t13f0dbtq8t" path="res://Assets/Textures/platform.png" id="1_1rc8e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lm2wk"]
 size = Vector2(96, 40)
@@ -12,11 +12,13 @@ freeze = true
 [node name="platformSprite" type="TextureRect" parent="." unique_id=505994198]
 z_index = 1
 z_as_relative = false
+offset_top = -44.000004
 offset_right = 100.0
-offset_bottom = 45.0
+offset_bottom = 55.999996
+scale = Vector2(0.96283954, 0.88600576)
 mouse_filter = 2
 texture = ExtResource("1_1rc8e")
-expand_mode = 1
+expand_mode = 2
 
 [node name="platformCol" type="CollisionShape2D" parent="." unique_id=233451829]
 position = Vector2(48, 20)

@@ -3,8 +3,8 @@ extends Node2D
 @onready var playerRef = get_tree().root.find_child("PlayerScene", true, false)
 
 
-var yesTexture = preload("res://Assets/Textures/yes.png")
-var noTexture = preload("res://Assets/Textures/no.png")
+var yesTexture = preload("res://Assets/Textures/green.png")
+var noTexture = preload("res://Assets/Textures/red.png")
 
 var wasGrounded = false
 var isGrounded = false

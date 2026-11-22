@@ -6,9 +6,12 @@ var rowsAmount = 5
 var currentRowPos: int = 0
 
 var platformChancePerSlot = 1
-var platformChanceDecay = 0.4
+var platformChanceDecay = 0.05
 
 var platformXposes = [-350, -250, -150, -50, 50, 150, 250]
+
+
+var safeSlotIndex = 2
 
 
 func _physics_process(delta): 
@@ -17,19 +20,33 @@ func _physics_process(delta):
 	tryProgressRows()
 	
 	
-	
-	pass
 
 
 func generatePlatformsForRow(row: int):
 	
 	var chanceForThisPlat = platformChancePerSlot
-	platformXposes.shuffle()
+	var nextSlotIndex = safeSlotIndex + [-2, 2].pick_random()
 	
-	for i in platformXposes.size():
+	if nextSlotIndex < 0:
+		nextSlotIndex = safeSlotIndex + 2
+		
+	if nextSlotIndex >= platformXposes.size():
+		nextSlotIndex = safeSlotIndex - 2
+	
+	
+	var slots = [0, 1, 2, 3, 4]
+	slots.shuffle()
+	
+	
+	for i in slots.size():
 		var random_float = randf()
 		
-		if random_float < chanceForThisPlat:
+		if i == safeSlotIndex:
+			continue
+		
+		
+		
+		if i == nextSlotIndex or random_float < chanceForThisPlat:
 			var newPlatform = preload("res://Scenes/platform.tscn")
 			var instancedPlat = newPlatform.instantiate()
 			
@@ -41,7 +58,7 @@ func generatePlatformsForRow(row: int):
 		chanceForThisPlat = chanceForThisPlat * platformChanceDecay
 		print(chanceForThisPlat)
 	
-	
+	safeSlotIndex = nextSlotIndex
 	
 	
 

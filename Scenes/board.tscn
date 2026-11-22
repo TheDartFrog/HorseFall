@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://75x8supcyloh"]
 
-[ext_resource type="Texture2D" uid="uid://dkb3s7vy01g7g" path="res://Assets/Textures/board.png" id="1_2wvcj"]
 [ext_resource type="Script" uid="uid://ckcme4k646ijw" path="res://boardScript.gd" id="1_shhme"]
-[ext_resource type="Texture2D" uid="uid://bawqqua0tr7ij" path="res://Assets/Textures/availableMoves_board.png" id="2_uh3b8"]
+[ext_resource type="Texture2D" uid="uid://dh4n5hye8p076" path="res://Assets/Textures/board_real2.png" id="2_shhme"]
+[ext_resource type="Texture2D" uid="uid://c8sisxh36i5y2" path="res://Assets/Textures/blues.png" id="3_shhme"]
 [ext_resource type="Texture2D" uid="uid://q284yrqpcsja" path="res://Assets/Textures/yes.png" id="3_uh3b8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lm2wk"]
@@ -26,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_2wvcj")
+texture = ExtResource("2_shhme")
 stretch_mode = 2
 
 [node name="board_moves" type="TextureRect" parent="." unique_id=1779409059]
@@ -43,7 +43,7 @@ offset_right = 350.0
 offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_uh3b8")
+texture = ExtResource("3_shhme")
 
 [node name="goButton1" type="TextureButton" parent="." unique_id=907937192]
 z_index = 3
