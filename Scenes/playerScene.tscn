@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bc2gtgbshd8xx" path="res://Assets/Textures/icon.svg" id="1_f0e4c"]
 [ext_resource type="PackedScene" uid="uid://75x8supcyloh" path="res://Scenes/board.tscn" id="3_ok6mi"]
 
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_lm2wk"]
+length = 8.0
+
 [node name="PlayerScene" type="RigidBody2D" unique_id=630646939]
 script = ExtResource("1_33jum")
 
@@ -43,3 +46,9 @@ position = Vector2(100, -220)
 
 [node name="horsNode4" type="Node2D" parent="." unique_id=1099341803]
 position = Vector2(200, -120)
+
+[node name="groundCheckArea2D" type="Area2D" parent="." unique_id=453722354]
+
+[node name="GroundCheckCol2D" type="CollisionShape2D" parent="groundCheckArea2D" unique_id=861619530]
+position = Vector2(0, -1)
+shape = SubResource("SeparationRayShape2D_lm2wk")

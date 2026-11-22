@@ -21,7 +21,6 @@ func _physics_process(delta):
 		return
 	isGrounded = playerRef.isGrounded
 	switchGroundedStateBoard()
-	enableButton(3)
 	if not isGrounded:
 		return ## exit func if not on ground
 	
@@ -89,13 +88,13 @@ func disableButton(number: int):
 			$goButton1.texture_hover = noTexture
 		2:
 			enableBtn2 = false
-			$goButton2.texture_hover = yesTexture
+			$goButton2.texture_hover = noTexture
 		3:
 			enableBtn3 = false
-			$goButton3.texture_hover = yesTexture
+			$goButton3.texture_hover = noTexture
 		4:
 			enableBtn4 = false
-			$goButton4.texture_hover = yesTexture
+			$goButton4.texture_hover = noTexture
 		_:
 			print("what")
 
