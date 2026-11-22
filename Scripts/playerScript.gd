@@ -11,11 +11,11 @@ func _ready():
 func goToNode(theNode: int): ## nodes 1-4
 	match theNode:
 		1:
-			self.position = $horsNode1.position
+			self.global_position = $horsNode1.global_position
 		2:
-			self.position = $horsNode2.position
+			self.global_position = $horsNode2.global_position
 		3:
-			self.position = $horsNode3.position
+			self.global_position = $horsNode3.global_position
 		4:
-			self.position = $horsNode4.position
+			self.global_position = $horsNode4.global_position
 		_: print("what")

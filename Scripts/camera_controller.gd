@@ -6,7 +6,7 @@ var currentCameraSpeed = 0.0
 var cameraSpeedMult = 0.0 ## later divided by cam speed mag
 var cameraSpeedMagnitude = 10.0
 
-var highestCameraHeight = self.position.y * -1 ## mult by -1 because why the hell is up decreasing in godot????
+var highestCameraHeight = self.global_position.y * -1 ## mult by -1 because why the hell is up decreasing in godot????
 
 func _ready():
 	playerRef = %PlayerScene
@@ -18,16 +18,16 @@ func _physics_process(delta):
 	
 
 func updateHighestHeight():
-	highestCameraHeight = self.position.y*-1
+	highestCameraHeight = self.global_position.y*-1
 
 func moveCam():
-	if playerRef.position.y*-1> highestCameraHeight+100:
-		#print("pos ", playerRef.position.y*-1)
+	if playerRef.global_position.y*-1> highestCameraHeight+100:
+		#print("pos ", playerRef.global_position.y*-1)
 		#print("camheigh ", highestCameraHeight)
-		self.position.y = playerRef.position.y+100
+		self.global_position.y = playerRef.global_position.y+100
 		print("ooooh")
 	else:
-		self.position.y = self.position.y-currentCameraSpeed
+		self.global_position.y = self.global_position.y-currentCameraSpeed
 
 func updateCameraSpeed():
 	currentCameraSpeed = currentCameraSpeed * (1 + (cameraSpeedMult/cameraSpeedMagnitude))

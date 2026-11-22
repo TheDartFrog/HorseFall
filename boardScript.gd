@@ -10,7 +10,7 @@ var enableBtn2 = false
 var enableBtn3 = false
 var enableBtn4 = false
 
-#TODO: check if player can move to button's position
+#TODO: check if player can move to button's global_position
 
 func _physics_process(delta): 
 	if playerRef == null:
