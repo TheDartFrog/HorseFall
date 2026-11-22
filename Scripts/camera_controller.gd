@@ -41,6 +41,13 @@ func stopCamera(): # for when we want to stop the camera later (during death)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body == playerRef:
-		print("lose game func yeah")
+		loseGameLol()
 	elif body.name.match("**Platform****"):
 		body.queue_free()
+
+
+func loseGameLol():
+	print("lose game func yeah")
+	currentCameraSpeed = 0
+	playerRef.hide()
+	#TODO: lose game screen
