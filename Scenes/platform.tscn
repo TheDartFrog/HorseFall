@@ -8,13 +8,15 @@ size = Vector2(96, 40)
 [node name="Platform" type="RigidBody2D" unique_id=974148504]
 freeze = true
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=505994198]
+[node name="platformSprite" type="TextureRect" parent="." unique_id=505994198]
+z_index = 1
+z_as_relative = false
 offset_right = 96.0
 offset_bottom = 40.0
 texture = ExtResource("1_1rc8e")
 expand_mode = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=233451829]
+[node name="platformCol" type="CollisionShape2D" parent="." unique_id=233451829]
 position = Vector2(48, 20)
 shape = SubResource("RectangleShape2D_lm2wk")
 one_way_collision = true

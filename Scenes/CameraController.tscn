@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://em2a86qrb816"]
+
+[node name="CameraController" type="Node2D" unique_id=804672092]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=231145500]
+position = Vector2(0, -189)
+position_smoothing_enabled = true

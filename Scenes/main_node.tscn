@@ -2,11 +2,27 @@
 
 [ext_resource type="PackedScene" uid="uid://deu05bne6bgal" path="res://Scenes/platform.tscn" id="1_jah86"]
 [ext_resource type="PackedScene" uid="uid://d14wahh4wgwm0" path="res://Scenes/playerScene.tscn" id="2_5otrc"]
+[ext_resource type="PackedScene" uid="uid://em2a86qrb816" path="res://Scenes/CameraController.tscn" id="3_nfdxk"]
 
 [node name="MainNode" type="Node2D" unique_id=1211837900]
 
 [node name="Platform" parent="." unique_id=974148504 instance=ExtResource("1_jah86")]
-position = Vector2(544, 505)
+position = Vector2(-47, 101)
 
 [node name="PlayerScene" parent="." unique_id=630646939 instance=ExtResource("2_5otrc")]
-position = Vector2(597, 399)
+unique_name_in_owner = true
+
+[node name="Platform2" parent="." unique_id=299482523 instance=ExtResource("1_jah86")]
+position = Vector2(32, 14)
+
+[node name="Platform3" parent="." unique_id=300946520 instance=ExtResource("1_jah86")]
+position = Vector2(-167, -66)
+
+[node name="Platform4" parent="." unique_id=2033096162 instance=ExtResource("1_jah86")]
+position = Vector2(143, 167)
+
+[node name="Platform5" parent="." unique_id=488197905 instance=ExtResource("1_jah86")]
+position = Vector2(-262, -66)
+
+[node name="CameraController" parent="." unique_id=804672092 instance=ExtResource("3_nfdxk")]
+unique_name_in_owner = true
