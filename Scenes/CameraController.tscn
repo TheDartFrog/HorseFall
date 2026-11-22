@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://em2a86qrb816"]
 
+[ext_resource type="Script" uid="uid://pl20ly15rg4g" path="res://Scripts/camera_controller.gd" id="1_qsppd"]
+
 [node name="CameraController" type="Node2D" unique_id=804672092]
+script = ExtResource("1_qsppd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=231145500]
 position = Vector2(0, -189)
