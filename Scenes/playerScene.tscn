@@ -30,4 +30,16 @@ polygon = PackedVector2Array(-15, 0, -18, -5, -18, -52, -15, -57, 14, -57, 18, -
 
 [node name="Board" parent="." unique_id=850784260 instance=ExtResource("3_ok6mi")]
 z_as_relative = false
-position = Vector2(0, -130.92)
+position = Vector2(0, -130)
+
+[node name="horsNode1" type="Node2D" parent="." unique_id=1423556307]
+position = Vector2(-200, -120)
+
+[node name="horsNode2" type="Node2D" parent="." unique_id=1737870930]
+position = Vector2(-100, -220)
+
+[node name="horsNode3" type="Node2D" parent="." unique_id=1516441417]
+position = Vector2(100, -220)
+
+[node name="horsNode4" type="Node2D" parent="." unique_id=1099341803]
+position = Vector2(200, -120)
