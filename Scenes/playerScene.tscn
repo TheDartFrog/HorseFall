@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d14wahh4wgwm0"]
+
+[ext_resource type="Script" uid="uid://nh5pcrtulosm" path="res://Scripts/playerScript.gd" id="1_33jum"]
+[ext_resource type="Texture2D" uid="uid://bc2gtgbshd8xx" path="res://Assets/Textures/icon.svg" id="1_f0e4c"]
+
+[node name="PlayerScene" type="RigidBody2D" unique_id=630646939]
+script = ExtResource("1_33jum")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=99250196]
+offset_left = -18.0
+offset_top = -57.0
+offset_right = 18.0
+texture = ExtResource("1_f0e4c")
+expand_mode = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=86946812]
+position = Vector2(-3.8146973e-06, -0.08125305)
+scale = Vector2(0.9999999, 0.99890363)
+polygon = PackedVector2Array(-15, 0, -18, -5, -18, -52, -15, -57, 14, -57, 18, -52, 18, -5, 15, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=789469519]
+position = Vector2(0, -135)
+position_smoothing_enabled = true

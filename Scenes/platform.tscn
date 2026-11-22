@@ -6,6 +6,7 @@
 size = Vector2(96, 40)
 
 [node name="Platform" type="RigidBody2D" unique_id=974148504]
+freeze = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=505994198]
 offset_right = 96.0
