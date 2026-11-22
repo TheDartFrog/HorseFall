@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dty1b7slvkwhn"]
+
+[ext_resource type="Script" uid="uid://b7s5h5k3ubror" path="res://Scripts/startbutton.gd" id="1_60k44"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=890502961]
+follow_viewport_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=280805708]
+position = Vector2(572, 320)
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1659267990]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.5
+offset_top = -84.0
+offset_right = 71.5
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 42
+theme_override_constants/margin_top = 137
+
+[node name="Button" type="Button" parent="." unique_id=275948334]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 21.0
+offset_right = 51.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.605, 1.605)
+pivot_offset = Vector2(50.5, 15.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "      PLAY!      "
+script = ExtResource("1_60k44")
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

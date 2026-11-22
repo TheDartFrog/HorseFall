@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="HorseFall"
-run/main_scene="uid://hkatbkjg2gdp"
+run/main_scene="uid://dty1b7slvkwhn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://Assets/Textures/icon.svg"
 
